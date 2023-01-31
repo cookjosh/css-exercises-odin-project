@@ -1,0 +1,26 @@
+/* My solutions below, author's solutions are in ./solution */
+
+.odd-item {
+    background-color: #faa7a7;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+    font-size: 24px;
+}
+
+#even-item {
+    color: #2c3cf2;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}
+
+.odd-item.third {
+    background-color: #faa7a7;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+    font-size: 40px;
+}
+
+#fourth-item {
+    background-color: #23fa5c;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
