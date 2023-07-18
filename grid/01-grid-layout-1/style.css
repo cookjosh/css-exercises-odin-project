@@ -1,9 +1,21 @@
+/* Based on assignment at Odin Project grid positioning assignment.
+https://www.theodinproject.com/lessons/intermediate-html-and-css-positioning-grid-elements
+*/
+
 body, html {
   height: 100%;
   margin: 0;
 }
 
 .container {
+  display: grid;
+  grid-template: 12vh 12vh 62vh 12vh / 30vw 66vw;
+  grid-template-areas:
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer";
+  gap: 15px 15px;
   text-align: center;
   height: 100%;
   padding: 16px;
@@ -21,18 +33,22 @@ body, html {
 
 .header {
   background-color: #FFDE22;
+  grid-area: header;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-area: sidebar;
 }
 
 .nav {
   background-color: #00DDFF;
+  grid-area: nav;
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: article;
 }
 
 .article p {
@@ -44,4 +60,5 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+  grid-area: footer;
 }
