@@ -5,6 +5,10 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: .7fr .5fr minmax(8fr, 8.5fr) .5fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,15 +21,39 @@
 
 .header {
   background-color: #393f4d;
+  grid-area: 1 / 1 / 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-area: 2 / 1 / 4 / 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(75px, auto));
+  grid-auto-rows: auto;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -34,6 +62,9 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  height: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 
@@ -42,12 +73,19 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  height: 100%;
 }
 
 .nav {
   background-color: #FF7755;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
@@ -55,6 +93,11 @@
 
 .article {
   background-color: #bccbde;
+  grid-area: 3 / 2 / 4 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px
 }
 
 .article p {
@@ -68,6 +111,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
@@ -83,9 +127,29 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: 4 / 1 / 5 / 3;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;  
 }
+
+
+/* Self Check:
+The container element has two columns - Done
+The container's second column is 4 times larger than the first column - Done
+The container element has a gap of 4px - Done
+The header element has two columns - Done
+The ul inside the menu element contains another grid - Done
+The ul inside the nav element contains another grid - Done
+The sidebar element has a gap of 50px - Done
+The text elements in the sidebar are centered with grid
+The article element should set grid columns using repeat along with the auto-fit and minmax properties
+The article columns should have a minimum value of 250px and a maximum of 1fr unit - Done
+The article element has a gap of 15px - Done
+The card elements inside the article container have a height of 200px - Done
+The header and footer span across both columns - Done
+The sidebar only spans across the first column - Done
+The nav and article elements only span across the second column - Done
+*/
