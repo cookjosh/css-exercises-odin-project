@@ -52,7 +52,6 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(75px, auto));
-  grid-auto-rows: auto;
   gap: 50px;
 }
 
@@ -62,9 +61,8 @@ ul {
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
-  height: 100%;
-  text-align: center;
-  margin-top: 20px;
+  display: grid;
+  align-content: center;
 }
 
 
@@ -73,7 +71,6 @@ ul {
   color: black;
   font-size: 16px;
   font-weight: normal;
-  height: 100%;
 }
 
 .nav {
